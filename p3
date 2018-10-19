@@ -1,0 +1,23 @@
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class p3
+{
+    static Frame frm=new Frame("Grid Layout");
+    static Button [][] btn_Array = new Button[10][10];
+    public static void main(String args[])
+    {
+        GridLayout grid=new GridLayout(10,10);//3列5行的配置
+        frm.setLayout(grid);
+        frm.setSize(200,150);
+        for(int a=0;a<=10;a++) {
+            for (int i=0;i<10;i++){
+                btn_Array[a][i] = new Button(Integer.toString(a));
+                frm.add(btn_Array[a][i]);
+            }
+        }
+        frm.setVisible(true);
+
+    }
+}
